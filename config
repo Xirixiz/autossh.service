@@ -1,0 +1,10 @@
+Host tunnel
+    Hostname xxx
+    ProxyCommand /usr/bin/corkscrew localhost 3128 %h %p # If proxy
+    TCPKeepAlive yes
+    ServerAliveInterval 120
+    ServerAliveCountMax 5
+    User xxx
+    Port 22
+    LocalForward 11022 192.168.100.1:22 # Enable SSH to IP address remote LAN
+    RemoteForward 10022 localhost:22 # Enable reverse SSH tunnel, allow remote host to connect to 10022 to connect to this (autossh) server

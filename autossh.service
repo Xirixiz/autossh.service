@@ -1,0 +1,14 @@
+# /etc/systemd/system/autossh.service
+[Unit]
+Description=Continuous ssh tunnel
+After=network-online.target
+
+[Service]
+User=xxx
+Environment="AUTOSSH_GATETIME=0"
+ExecStart=/usr/bin/autossh -M 0 -NTq -F /home/xxx/.ssh/config tunnel
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
