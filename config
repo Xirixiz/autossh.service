@@ -8,3 +8,4 @@ Host tunnel
     Port 22
     LocalForward 11022 192.168.100.1:22 # Enable SSH to IP address remote LAN
     RemoteForward 10022 localhost:22 # Enable reverse SSH tunnel, allow remote host to connect to 10022 to connect to this (autossh) server
+    RemoteForward 5900 localhost:5900 # Enable reverse SSH tunnel VNC
