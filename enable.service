@@ -1,5 +1,0 @@
-sudo systemctl daemon-reload
-sudo systemctl start autossh.service
-
-# And ensure the service starts on boot:
-sudo systemctl enable autossh.service
